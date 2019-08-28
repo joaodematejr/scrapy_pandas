@@ -1,5 +1,5 @@
-# scrapy_pandas
+# Scrapy Pandas
 
 Projeto Scrapy Pandas Cesusc
 
-![alt text](https://terminalroot.com.br/assets/img/python/python.jpg)
+![alt text](https://github.com/joaodematejr/scrapy_pandas/blob/master/img/python.jpg?raw=true)
