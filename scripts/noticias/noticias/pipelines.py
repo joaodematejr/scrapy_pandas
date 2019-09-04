@@ -5,17 +5,14 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 # ARQUIVO DESTINADO A TRABALHAR COM BANCO DE DADOS
-import json
 
 
 class NoticiasPipeline(object):
     def open_spider(self, spider):
-        self.file = open('notices.txt', 'a')
+        return spider
 
     def close_spider(self, spider):
-        self.file.close()
+        return spider
 
     def process_item(self, item, spider):
-        line = json.dumps(dict(item)) + '\n'
-        self.file.write(line)
         return item

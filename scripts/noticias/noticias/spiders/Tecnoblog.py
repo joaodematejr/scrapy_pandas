@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from pymongo import MongoClient
+import json
 from noticias.items import NoticiasItem
+
+
+configMongoDb = MongoClient('localhost', 27017)
+
+banco = configMongoDb['mongo_tecnoblog']
 
 
 class TecnoblogSpider(scrapy.Spider):
@@ -22,4 +29,16 @@ class TecnoblogSpider(scrapy.Spider):
         author = response.css("span.author ::text").extract_first()
         text = "".join(response.css("div.entry ::text").extract())
         notice = NoticiasItem(title=title, author=author, text=text, link=link)
+        """ DADOS A SER TRATATOS A PARTIR DAQUI  """
+        converterDadosJson = {'link': link, 'text': text}
+        print('=============== INICIO ===============')
+        print('dadosJson ', converterDadosJson)
+        print('=============== FIM ===============')
+        """ FINALIZAÇÃO DO TRATAMENTO DE DADOS AQUI  """
+
+        """ TESTANDO CONEXAO COM BANCO DE DADO  """
+        db = configMongoDb.pymongo_test
+        dados = db.dados
+        dadosInserirBanco = dados.insert_many([converterDadosJson])
+
         yield notice

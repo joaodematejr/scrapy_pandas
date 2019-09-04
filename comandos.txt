@@ -1,0 +1,34 @@
+ 
+ //INSTALAR SCRAPY VAI PIP3
+ 3349  pip3 install scrapy
+ //CRIAR UM NOVO PROJETO 
+ 3350  scrapy startproject scrapy_cesusc
+ 3351  ls
+ 3352  scrapy startproject noticias
+ 3353  cd noticias
+ 3354  scrapy genspider Tecnoblog tecnoblog.net
+ //INICIAR SHELL MODO NAVEGADOR
+ 3355  scrapy shell http://tecnoblog.net
+ 3356  clear
+ 3357  scrapy shell http://tecnoblog.net
+
+ 3358  scrapy runspider noticias/spiders/Tecnoblog.py
+ //LIMPAR TERMINAL
+ 3359  clear
+ //DENTRO DA PASTA joaodematejr in scrapy_pandas/scripts/noticias
+ 3360  scrapy runspider noticias/spiders/Tecnoblog.py
+
+
+ 2 ETAPA
+
+ //CONFIG BANCO DE DADOS MONGODB COM PYTHON 
+
+//INSTAÇÃO MONGODB VAI PIP3
+pip install pymongo
+
+
+
+
+
+
+
