@@ -4,9 +4,8 @@ from pymongo import MongoClient
 import json
 from noticias.items import NoticiasItem
 
-
+""" CONFIGURACAOES MONGODB """
 configMongoDb = MongoClient('localhost', 27017)
-
 banco = configMongoDb['mongo_tecnoblog']
 
 
@@ -40,6 +39,7 @@ class TecnoblogSpider(scrapy.Spider):
         """ TESTANDO CONEXAO COM BANCO DE DADO  """
         db = configMongoDb.pymongo_test
         dados = db.dados
+        """ SALVAR DADOS NO MONGODB """
         dadosInserirBanco = dados.insert_many([converterDadosJson])
 
         yield notice
