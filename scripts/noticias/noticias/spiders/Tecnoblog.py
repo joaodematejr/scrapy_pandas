@@ -30,7 +30,8 @@ class TecnoblogSpider(scrapy.Spider):
         text = "".join(response.css("div.entry ::text").extract())
         notice = NoticiasItem(title=title, author=author, text=text, link=link)
         """ DADOS A SER TRATATOS A PARTIR DAQUI  """
-        converterDadosJson = {'link': link, 'text': text}
+        converterDadosJson = {'link': link, 'texto': text,
+                              'autor': author, 'noticia': notice}
         print('=============== INICIO ===============')
         print('dadosJson ', converterDadosJson)
         print('=============== FIM ===============')
