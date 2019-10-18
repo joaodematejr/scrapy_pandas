@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for noticias project
+# Scrapy settings for startup project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,19 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'noticias'
+BOT_NAME = 'startup'
 
-SPIDER_MODULES = ['noticias.spiders']
-NEWSPIDER_MODULE = 'noticias.spiders'
+SPIDER_MODULES = ['startup.spiders']
+NEWSPIDER_MODULE = 'startup.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'noticias (+http://www.yourdomain.com)'
+#USER_AGENT = 'startup (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
+
+USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://startupbase.com.br/home/startups?q=&states=all&cities=all&groups=all&targets=all&phases=all&models=all&badges=all)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +49,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'noticias.middlewares.NoticiasSpiderMiddleware': 543,
+#    'startup.middlewares.StartupSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'noticias.middlewares.NoticiasDownloaderMiddleware': 543,
+#    'startup.middlewares.StartupDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -65,7 +67,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 # ITEM_PIPELINES = {
-#    'noticias.pipelines.NoticiasPipeline': 300,
+#    'startup.pipelines.StartupPipeline': 300,
 # }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -88,7 +90,3 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
-
-""" DESATIVAR MODO DEBUG """
-LOG_LEVEL = 'INFO'

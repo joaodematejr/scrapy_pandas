@@ -8,11 +8,7 @@
 import scrapy
 
 
-class NoticiasItem(scrapy.Item):
+class StartupItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    title = scrapy.Field()
-    author = scrapy.Field()
-    text = scrapy.Field()
-    link = scrapy.Field()
     pass
