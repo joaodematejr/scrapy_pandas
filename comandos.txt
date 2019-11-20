@@ -19,6 +19,7 @@
  3360  scrapy runspider noticias/spiders/Tecnoblog.py
 
 
+
  2 ETAPA
 
  //CONFIG BANCO DE DADOS MONGODB COM PYTHON 
@@ -27,6 +28,10 @@
 pip install pymongo
 
 
+
+# Dia 06/11/2019
+
+scrapy runspider spiders/Manager.py
 
 
 

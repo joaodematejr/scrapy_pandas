@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for startup project
+# Scrapy settings for app project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,19 +9,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'startup'
+BOT_NAME = 'app'
 
-SPIDER_MODULES = ['startup.spiders']
-NEWSPIDER_MODULE = 'startup.spiders'
+SPIDER_MODULES = ['app.spiders']
+NEWSPIDER_MODULE = 'app.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'startup (+http://www.yourdomain.com)'
+#USER_AGENT = 'app (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
-
-USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://startupbase.com.br/home/startups?q=&states=all&cities=all&groups=all&targets=all&phases=all&models=all&badges=all)'
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -41,34 +39,34 @@ USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://startupbase.com.br
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-# DEFAULT_REQUEST_HEADERS = {
+#DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
-# }
+#}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    'startup.middlewares.StartupSpiderMiddleware': 543,
-# }
+#SPIDER_MIDDLEWARES = {
+#    'app.middlewares.AppSpiderMiddleware': 543,
+#}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'startup.middlewares.StartupDownloaderMiddleware': 543,
-# }
+#DOWNLOADER_MIDDLEWARES = {
+#    'app.middlewares.AppDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
+#EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-# }
+#}
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'startup.pipelines.StartupPipeline': 300,
-# }
+#ITEM_PIPELINES = {
+#    'app.pipelines.AppPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
